@@ -1,0 +1,1319 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #f3edb0;
+  font-family: permanent marker;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/*for the nav*/
+
+
+::-webkit-scrollbar-track{
+  background:  #f3edb0;
+}
+::-webkit-scrollbar-thumb{
+  background:  #f3edb0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #f3edb0;
+}
+
+#navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ width: 100%;
+}
+#navbar li{
+  list-style: none;
+  gap: 20px;
+  top: -1px;
+  padding: 11px 15px;
+  position: relative;
+}
+#navbar li a{
+  text-decoration: none;
+  font-size: 17px;
+  font-family:permanent marker;
+  font-weight: 200;
+  color: black;
+  transition: 0.2s ease;
+  min-height: 20px;
+
+}
+#navbar li a:hover,
+#navbar li a.active{
+  color:  #f3edb0;
+  border: 8px  solid #000;
+  border-radius:3px;
+  box-shadow:0px 2px 6px rgba(0,0,0,0.1);
+  z-index:-1;
+  background-color: black;
+  transition: color 0.6ms ease,
+  
+}
+
+
+/** {
+  content: "";
+  width:0px;
+  bottom: -8px;
+  left: 0px;
+  background-color: black;
+  border: 2px solid #000000;
+  font-size: 17px;
+  padding: 1px 12px;
+  z-index: -1;
+  position: absolute;
+  top: 9px;
+  transition: 1s ease-in;
+}  **/
+
+
+#navbar li a.active::after,
+#navbar li a:hover::after
+{
+
+  width:0px;
+  bottom: -8px;
+  left: 20px;
+  background-color: black;
+  border: 1px solid #000;
+  border-radius:5px;
+  z-index:-1;
+  padding: 2px 125px;
+}
+
+
+
+
+
+
+/**.navbar{
+  background-color: #fefcf8;
+  padding: 5px 6px;
+  position: absolute;
+  top: 20px;
+  left: 430px;
+  z-index: -1;
+
+}
+.nav-link{
+  font-family:permanent marker;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+  margin: 0 10px;
+  font-size: 19px;
+  transition: color 0.3s ease,border-bottom 0.3s ease;
+  
+}**/
+
+/*
+#navbar li a.active::after,
+#navbar li a:hover::after
+{
+  content: "";
+  width:15%;
+  height: 30px;
+  background:black;
+  color: whitesmoke;
+  position: absolute;
+  bottom: -4px;
+  left: 2px;
+  z-index: -1;
+}*/
+
+
+/*for the line*/
+.line{
+  position: absolute;
+  width:100% ;
+  background-color:rgb(214, 8, 8);
+  height: 2.6px;
+  top: 120px;
+}
+
+/*for the dropdown*/
+.nav-container{
+  position: relative;
+  height: 200px;
+  width: 100%;
+  font-family: permanent marker,playground;
+}
+
+.dropdown {
+  position: relative; /* Ensure dropdown is positioned relative to its parent */
+  display: inline-block; /* Align dropdowns horizontally */
+  max-width: 30px;
+}
+.dropdown span{
+font-size: 25px;
+font-weight: 900;
+line-height: 1px;
+color: green;
+border:3px #000;
+}
+
+.dropdown span:hover,
+.dropdown:focus
+{
+  color: red;
+  font-size: 50px;
+  transition: 0.5s;
+  z-index: 0;
+}
+
+
+.dropbtn {
+  background-color:  #f3edb0; /* Default button color */
+  border: 2px solid #000; /* Button border */
+  font-size: 17px;
+  padding: 8px 9px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-family: 'Permanent Marker';
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #000; /* Change background color on hover */
+  color:  #f3edb0; /* Change text color on hover */
+}
+
+.dropdown-content {
+  display: none; /* Initially hide dropdown content */
+  position: absolute; /* Position dropdown content relative to parent */
+  background-color:  #f3edb0; /* Dropdown background */
+  min-width: 160px; /* Minimum width */
+  border: 1px solid #000; /* Border around dropdown */
+  border-radius: 2px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  z-index: 1000; /* Ensure dropdown appears above other elements */
+  top: 100%; /* Position directly below the button */
+  left: 0; /* Align with the button */
+
+}
+
+.dropdown-content a {
+  color: #000; /* Default link color */
+  padding: 10px 16px; /* Padding for links */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make links block-level */
+  font-size: 15px;
+  font-family: 'Permanent Marker';
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(0, 0, 0); /* Change background on hover */
+  color:  #f3edb0; /* Ensure text color remains consistent */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown content on hover */
+}
+
+
+/*for search*/
+.search{
+  position: absolute;
+  left: 150px;
+  margin: 0 auto;
+  top: 20px;
+}
+input#search-bar{
+  margin: 0 auto;
+  width: 100%;
+  height: 32px;
+  padding: 0 20px;
+  font-size: 1rem;
+  background-color:  #f3edb0;
+  border:2px solid black;
+  outline: none;
+  font-family: 'Permanent Marker';
+  
+}
+/*for the logo*/
+.logo{
+  position: absolute;
+top:3px;
+left: 7px;
+
+}
+/*sign up button*/
+.button-container{
+  position: absolute;
+  top: 18px;
+  left: 1010px;
+  display: flex;
+  gap: 12px;/*space between buttons*/
+}
+
+.button-container span{
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1px;
+  color: green ;
+  border:3px #000;
+  }
+
+  .button-container span:hover,
+  .button-container :focus
+{
+  color: red;
+  font-size: 25px;
+  transition: 0.5s;
+  z-index: 0;
+}
+
+.button-container .signup:hover{
+  box-sizing: border-box;
+  color:  #f3edb0;
+  width: 124px;
+  height: 36px;
+  background:black;
+  border: 1px solid ;
+  border-radius: 20px;
+  font-family: 'Permanent Marker';
+        font-style: normal;
+        font-weight: 400;
+        transition: 0.2s ease-in-out;
+
+  }
+  .button-container .login:hover{
+    box-sizing: border-box;
+    color:  #f3edb0;
+    width: 124px;
+    height: 36px;
+    background:black;
+    border: 1px solid ;
+    border-radius: 20px;
+    font-family: 'Permanent Marker';
+          font-style: normal;
+          font-weight: 400;
+          transition: 0.2s ease-in-out;
+  
+    }
+  
+.auth-button{
+  box-sizing: border-box;
+  width: 124px;
+  height: 36px;
+  background: #f3edb0 ;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  font-family: 'Permanent Marker';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        box-shadow: rgba(39, 228, 14, 0.4) 2px 2px,
+                    rgba(121, 150, 228, 0.3) 3.5px 3.5px,
+                    rgba(0, 12, 0, 0.3) 4px 4px,
+                    rgba(219, 47, 47, 0.3) 5px 5px;
+                    z-index: 1;
+}
+
+/*
+#login-btn  {
+position: absolute;
+width: 97px;
+height: 39px;
+left: 1100px;
+top: 22px;
+text-decoration: none;
+display: inline-block;
+font-size: 17px;
+}*/
+
+
+/*#signin-btn{
+  width: 97px;
+  height: 39px;
+  left: 1220px;
+  top: 22px;
+  box-sizing: border-box;
+  position: absolute;
+  background: #242322;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  
+}*/
+
+
+
+
+/* Explore Works */
+#hero button{
+  position: absolute;
+  width: 272px;
+  height: 62px;
+  left: 980px;
+  top: 530px;
+  background:#000000;
+   border: 3px;
+   padding: 12px 70px 22px 75px;
+   border-radius: 20px;
+   cursor: pointer;
+   box-shadow: rgba(39, 228, 14, 0.4) 3px 3px,
+                    rgba(121, 150, 228, 0.3) 4px 4px,
+                    rgba(0, 12, 0, 0.3) 5px 5px,
+                    rgba(219, 47, 47, 0.3) 7px 7px;
+                    z-index: 1;
+   
+}
+
+#hero button :hover { 
+  position: absolute;
+  width: 272px;
+  height: 62px;
+  left: 980px;
+  top: 530px;
+    background-color:#fefcf8; /* Change background on hover */
+    color:  black; /* Ensure text color remains consistent */
+  z-index: -1;
+  }
+
+
+
+#hero button h1{
+        font-family: 'Permanent Marker';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 55px;
+        text-align: right;
+        width: 332px;
+        height: 87px;
+        left: -81px;
+        top: -22px;
+        position: absolute;
+        color: #f3edb0 ;
+}
+
+
+#hero h1{
+         position: absolute;
+        width: 892px;
+        height: 75px;
+        left: 401px;
+        top: 215px;
+        font-family: 'Permanent Marker';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 110px;
+        line-height: 55px;
+        text-align: right;
+        color: #000000;
+}
+#hero h1 span {
+  color: green;
+  font-size: 250px;
+}
+ /* A timeless journey  something quote*/
+#hero p{
+position: absolute;
+width: 560px;
+height: 20px;
+left: 700px;
+top: 420px;
+font-family: 'Permanent Marker';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 18px;
+text-align: right;
+color: #000000;
+}
+
+
+/*trigger the animation visible*/
+
+
+/**
+/* still-life-vase-with-fifteen-sunflowers-1888-1.jpg!Large 3 */
+
+#hero figure{
+  position: absolute;
+  width: 15px;
+  height: 35px;
+  left: -1px;
+  top: 420px;
+  background: url(.jpg);
+  border-radius: 18px;
+
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
+  
+  
+}
+
+#herocard{
+  position: absolute;
+  width: 15px;
+  height: 35px;
+  left: 112px;
+  top: 390px;
+  background: url(.jpg);
+  transform: rotate(-31.57deg);
+  z-index: -1;
+  transition: 8.2s ease;
+}
+
+#herocard img{
+  width: 400px;
+  height: 450px;
+  border-radius: 20px;
+}
+
+#herocard2{
+  position: absolute;
+  width: 15px;
+  height: 35px;
+  left: 125px;
+  top: 270px;
+  background: url(.jpg);
+  transform: rotate(-23.57deg);
+  z-index: -1;
+  transition: 8.2s ease;
+  
+}
+#herocard2 img{
+  width: 400px;
+  height: 430px;
+  border-radius: 20px;
+} 
+
+#herocard3{
+  position: absolute;
+  width: 15px;
+  height: 35px;
+  left: 200px;
+  top: 190px;
+  background: url(.jpg);
+  transform: rotate(-9.27deg);
+  z-index: -1;
+  transition: 8.4s ease;
+  
+}
+#herocard3 img{
+  width: 400px;
+  height: 430px;
+  border-radius: 20px;
+}
+
+
+#herocard5{
+  position: absolute;
+  width: 15px;
+  height: 35px;
+  left: 19px;
+  top: 590px;
+  background: url(.jpg);
+  transform: rotate(-56.60deg);
+  z-index: -1;
+  transition: 10.0s ease;
+  
+  
+}
+
+#herocard5 img{
+  width: 400px;
+  height: 430px;
+  border-radius: 20px;
+}
+/*doing the hero card was not funny at all,,ihad to do some calculations..its 1:36am  my back and my wrists hurt*/
+ 
+
+
+
+#herocard {
+  animation: staggeredStart 1s ease-out 0s; /* Start immediately */
+}
+
+#herocard2 {
+  animation: staggeredStart 1s ease-out 0.3s; /* Start after 0.3s */
+}
+
+#herocard3 {
+  animation: staggeredStart 1s ease-out 0.6s; /* Start after 0.6s */
+}
+
+#herocard5 {
+  animation: staggeredStart 1s ease-out 0.9s; /* Start after 0.9s */
+}
+
+
+
+ /** 
+ *{
+  outline: 1px solid red;
+}**/
+
+.horizontal-scroll{
+  display: flex;
+  white-space:nowrap;
+  overflow-x: auto;
+  gap: 40px;
+  padding: 10px;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding and borders in width   its fir the scroll thingy*/
+  position: relative; /* Adjust position */
+  align-items: center;
+  top: 799px;
+}
+
+.big-text h1{
+  font-size: 40px;
+  position: absolute;
+  top: 870px;
+  font-family: 'Permanent Marker';
+  left: 570px;
+
+}
+
+
+
+.item{
+  flex: 0 0 auto;
+  border-radius: 4px;
+  line-height: 0.5px;
+  
+}
+
+.item img{
+  width:90%;
+  height: 194px;
+  border-radius: 5px;
+}
+
+#hero2{
+  background-size: 900px ;
+ height: 100vh;
+ width: 100%;
+ background-repeat: no-repeat;
+ background-position: top 25% right 0;
+ padding: 0 60px;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ justify-content: center;
+ margin-bottom: 300px;
+position: absolute;
+top:1500px ;
+height: 100vh;
+ }
+
+ #hero2 h1{
+  font-size: 40px;
+  position: absolute;
+  top: -60px;
+  font-family: 'Permanent Marker';
+  left: 530px;
+ }
+
+ #hero2 p{
+         position: absolute;
+         top: 30px;
+         font-family: 'Permanent Marker';
+        font-size: 22px;
+        left: 350px;
+        align-items: center;
+      
+ }
+
+ 
+
+.banner-left{
+  top: 300px;
+  position: absolute;
+  left: 160px;
+  line-height: 0.5px;
+  left:30px ;
+}
+.banner-left img {
+width: 500px;
+height: 521px;
+position: absolute;
+top:190px ;
+left: 9px;
+border: #000 1.5px solid;
+}
+
+.banner-left h4{
+font-size: 24px;
+
+
+}
+.banner-left h5{
+  font-size: 19px;
+
+}
+  
+.banner-left span{
+  font-size: 15px;
+  top: 160px;
+  position: absolute;
+  
+ 
+
+}
+
+.banner-right{
+  position: absolute;
+  top: 300px;
+  line-height: 0.5px;
+  right: 560px;
+}
+
+.banner-right h4{
+font-size: 24px;
+
+
+}
+
+.banner-right h5{
+  font-size: 18px;
+  
+  }
+.banner-right span{
+  font-size: 15px;
+  top: 160px;
+  position: absolute;
+  
+
+}
+.banner-right img{
+width: 500px;
+height: 521px;
+position: absolute;
+top:190px ;
+left: -61px;
+border: #000 1.5px solid;
+
+}
+#hero2 a{
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Permanent Marker';
+  position: absolute;
+  bottom: -700px;
+  right: -240px;
+  text-decoration: none;
+  z-index: -1;
+  color: #000;
+  margin-bottom: -40px;
+}
+
+#hero3 {
+   height: 70px;
+   width: 100%;
+   position: absolute;
+   top: 2800px;
+
+}
+
+#hero3 h1{
+font-size: 40px;
+position: absolute;
+left: 580px;
+}
+
+.sheesh{
+  position: absolute;
+  width: 1350px;
+  background-color:rgb(214, 228, 20);
+  height: 1.6px;
+  top: 870px;
+}
+
+.shuperu{
+  position: absolute;
+  width: 1350px;
+  background-color:rgb(21, 18, 219);
+  height: 3px;
+  top: -59px;
+  left: -1px;
+}
+
+.line2{
+  position: absolute;
+  width:100% ;
+  background-color:rgb(236, 17, 218);
+  height: 1.6px;
+  top: 970px;
+}
+
+.line4{
+ 
+  position: absolute;
+  width: 1350px;
+  background-color:rgb(236, 98, 5);
+  height: 3px;
+  top: 1550px;
+  left: -1px;
+}
+
+.line5{
+ 
+  position: absolute;
+  width: 1350px;
+  background-color:rgb(18, 236, 11);
+  height: 2.5px;
+  top: 99px;
+  left: -1px;
+}
+
+
+
+#hero4{
+  width: 100%;
+  position: absolute;
+  top: 3760px;
+}
+
+#hero4 h1{
+  font-size: 30px;
+   position: absolute;
+   left: 520px;
+top: -30px;
+   font-family: 'Permanent Marker';
+}
+
+
+
+.trending{
+  flex: 0 0 auto;
+  width: 200px;
+  border-radius: 20px;
+  line-height: 0.5px;
+  height: 200px;
+}
+
+.trending img{
+  width:80%;
+  height: 200px;
+  border-radius: 3px;
+  border: #000 2.5px solid;
+}
+
+.trending h3{
+  font-size: 18px;
+  
+}
+.trending p{
+  font-size: 14px;}
+
+.trending button{
+  border-radius: 20px;
+  box-sizing: border-box;
+background: #fefcf8;
+  border: #000 1px solid;
+  cursor: pointer;
+  position: absolute;
+  text-decoration: none;
+  font-size: 15px;
+  width: 90px;
+  height: 32px;
+}
+.trending a{
+  font-size: medium;
+  font-weight: 400;
+  font-family:'Courier New', Courier, monospace;
+}
+
+
+.zaty-trending{
+  display: flex;
+  white-space: nowrap;
+  overflow-x: auto;
+  gap: 60px;
+  padding: 90px;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding and borders in width   its fir the scroll thingy*/
+  position: relative; /* Adjust position */
+  align-items: center;
+  top: 10px;
+
+}
+
+.curator-section{
+  max-width: 1200px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.curator-line1{
+  position: absolute;
+  width: 1350px;
+  background-color:black;
+  height: 3px;
+  top: 449px;
+  left: -1px;
+}
+
+.curator-section h2 {
+  font-family: 'Permanent Marker';
+font-size: 34px;
+font-weight: 700;
+margin-bottom: 40px;
+}
+
+.art-gallery{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+
+.artline1{
+  position: absolute;
+  width: 350.01px;
+  height: 0px;
+  border: 2px solid black;
+  transform: rotate(-90deg);
+  bottom: 260px;
+  left: 300px;
+}
+
+.artline2{
+  position: absolute;
+  width: 350.01px;
+  height: 0px;
+  border: 2px solid black;
+  transform: rotate(-90deg);
+  bottom: 260px;
+  left: 715px;
+}
+
+
+
+.art-card{
+  width: 30%;
+
+}
+
+.art-card img{
+  width: 320px;
+  height:230px;
+  border-radius: 1px;
+  row-gap: 80px;
+  border: 1.5px solid black;
+}
+
+
+.art-title{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 10px 0 5px;
+}
+
+.art-desc{
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.icon{
+  margin-top: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+/*.hr{
+  margin-top: 100px;
+  border: 1px solid  #000;
+}*/
+
+#hero5{
+  width: 100%;
+  position: absolute;
+  top: 4850px;
+}
+/*base card styling*/
+.zart-card{
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  background: url('FB_IMG_16762074466406644.jpg') center/cover no-repeat, #d9d9d9;
+  border-radius: 10px;
+  transform: matrix(0.91, -0.42, 0.4, 0.92, 0,0);
+}
+
+/*individual card positions*/
+.card-25 {left: 647px;
+  background: url(FB_IMG_16664351295890246.jpg) center/cover no-repeat;
+  top: 64px;}
+.card-28{left: 620px; top: 388px;}
+.card-27{left: 826px; top: -80px;}
+.card-26{left: 826px; top: 311px;}
+.card-22{left: 926px; top: 572px;}
+.card-23{left: 1150px; top: 424px;}
+.card-24{left: 1005px; top: 164px;}
+
+
+.headline{
+  position: absolute;
+  width: 800px;
+  left: 120px;
+  top: 230px;
+  font-size : 45px;
+  line-height: 93px;
+  color: #000;
+  font-family: 'Permanent Marker';
+}
+
+
+/*cta button*/
+.cta-button{
+  position: absolute;
+  width: 399px;
+  height: 97px;
+  left: 120px;
+  top: 460px;
+  background: #000;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: rgba(39, 228, 14, 0.4) 2px 2px,
+                    rgba(121, 150, 228, 0.3) 3.5px 3.5px,
+                    rgba(0, 12, 0, 0.3) 4px 4px,
+                    rgba(219, 47, 47, 0.3) 5px 5px;
+                    z-index: 1;
+}
+
+.cta-button:hover{
+  background: #333;
+}
+
+.cta-button span{
+  color: #f3edb0;
+  font-size: 64px;
+  line-height: 93px;
+  font-family: 'Permanent Marker';
+}
+
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color:black;
+  width: 100%;
+  height: 210px;
+  box-sizing: border-box;
+  position: absolute;
+  top:5700px;
+
+}
+
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .col h2{
+font-size: 24px;
+}
+footer .col a{
+  font-size: 12px;
+  }
+
+  footer .col1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    left: 840px;
+    position: absolute;
+  
+  }
+
+  footer .col1 h2{
+    font-size: 24px;
+    }
+    footer .col1 a{
+      font-size: 12px;
+      }
+    
+
+
+      footer .col2 h2{
+        font-size: 24px;
+        position: absolute;
+          top:2px;
+          right: 41px;
+        }
+        footer .col2 p{
+          font-size: 12px;
+          position: absolute;
+          top: 60px;
+          right: 41px;
+          }
+          footer .col2 h3{
+            font-size: 12px;
+            position: absolute;
+            top: 90px;
+            right: 4px;
+            }
+
+
+
+footer .logo{
+  margin-bottom: 40px;
+  height: 50px;
+  
+
+}
+
+
+footer  h2{
+  font-size: 25px;
+  padding-bottom: 20px;
+  color: #fefcf8;
+  text-transform: uppercase;
+  font-family: 'Permanent Marker';
+  text-shadow: 
+  -1px #fefcf8;
+
+}
+footer  p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+  color: #fefcf8;
+  text-transform: uppercase;
+ text-shadow: -1px black;
+ position: absolute;
+ top: 120px;
+ font-family: 'Permanent Marker';
+
+}
+footer  h6{
+  font-size: 11px;
+  margin: 0 0 8px 0;
+  color: #fefcf8;
+  text-transform: uppercase;
+ text-shadow: -1px black;
+ position: absolute;
+ top: 98px;
+ font-family: 'Permanent Marker';
+
+}
+footer  p1{
+  font-size: 12px;
+  margin: 0 0 8px 0;
+  color: black;
+  text-transform: lowercase;
+ text-shadow: -1px black;
+
+}
+footer  h4{
+  font-size: 35px;
+  margin: 0 0 8px 0;
+  color: #fefcf8;
+  font-family: 'Permanent Marker';
+  text-transform: uppercase;
+ text-shadow: -1px brown;
+ top: 60px;
+ position: absolute;
+
+}
+footer  a {
+  font-size: 15px;
+  font-weight: 300;
+  font-family: 'Permanent Marker';
+  text-decoration: none;
+  color: #fefcf8;
+  margin-bottom:9px;
+  text-transform: uppercase;
+}
+footer.follow{
+margin-top: 20px;
+}
+footer.follow i{
+  color: #fefcf8;
+  padding-right: 4px;
+  cursor: pointer;
+  }
+
+
+
+  .col  h2{
+    font-size: 35px;
+  }
+
+footer .install .row img{
+  border: 1px solid;
+  border-radius: 6px;
+}
+footer .install img{
+  margin: 10px 0 15px 0;
+}
+footer.follow i:hover,
+footer :hover{
+  color: #fefcf8;
+  }
+
+footer .copyright{
+  width: 100%;
+  height: 1px;
+  margin-top: -57px;
+
+  text-align: center;
+ margin-bottom:9px;
+}
+footer .copyright h5{
+  font-size: 14px;
+  line-height: 5px;
+}
+
+
+/*the news section is coming in late and its kinda wonky ...i had to steal;sorry  copy others code;)*/
+
+.news-section{
+  width: 95%;
+  margin: 90px;
+}
+.news-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.news-header nav ul {
+list-style: none;
+display: flex;
+gap: 15px;
+padding: 0;
+position: absolute;
+right: 80px;
+bottom: -80px;
+}
+
+.news-header nav ul li {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.highlight{
+  color: crimson;
+  font-weight: bold;
+}
+
+.news-content{
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/*featured artsist*/
+.featured-article{
+  flex: 1.2;
+}
+.featured-article img{
+  width: 300px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.featured-article h3{
+  margin: 15px 0 10px;
+  font-size: 20px;
+}
+
+.featured-article p{
+  color: #333;
+}
+
+/*News list*/
+.news-list{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.news-item{
+  display: flex;
+  gap: 12px;
+}
+
+
+.news-item img{
+  width: 70px;
+  height: 80px;
+  object-fit: cover;
+  border-radius:6px;
+  position: absolute;
+  right: 568px;
+}
+
+
+.news-item .tag {
+  font-size: 12px;
+  color: green;
+  font-weight: bold;
+}
+
+
+/*side bar*/
+
+.news-sidebar{
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-stats div{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.social-stats img {
+  width: 20px;
+  height: 20px;
+}
+
+.most-recent img{
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.most-recent img{
+  width: 85%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.most-recent p {
+  font-size:13px;
+  margin-top: 8px;
+}
